@@ -11,4 +11,12 @@ export default defineConfig({
       origin: 'https://yumichiya.github.io/fetch-exercise/',
     },
   },
+  build: {
+    // generate .vite/manifest.json in outDir
+    manifest: true,
+    rollupOptions: {
+      // overwrite default .html entry
+      input: '/path/to/main.js',
+    },
+  },
 })
